@@ -1,0 +1,39 @@
+.header-container {
+  background: #eaeaea;
+}
+
+.logo-container {
+  background: #ffffff;
+  padding-top: 1.4rem;
+  padding-bottom: 0.75rem;
+  box-shadow: 0 4px 4px #cfcfcf;
+}
+.logo-container img {
+  display: block;
+  margin: auto;
+}
+
+.localisation-container {
+  padding-top: 1rem;
+  padding-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #353535;
+}
+.localisation-container .localisation-icone {
+  width: 0.75rem;
+  height: 1rem;
+  display: block;
+  margin-right: 1rem;
+}
+.localisation-container input {
+  font-size: 1rem;
+  font-weight: bold;
+  background: none;
+  border: none;
+  max-width: 140px;
+}
+.localisation-container input:focus {
+  outline: none;
+}/*# sourceMappingURL=header.css.map */

@@ -1,0 +1,36 @@
+// version smartphone
+.header-container{
+    background: #eaeaea;
+}
+
+.header-container{
+    .top-header{
+        background: red;
+        padding-top: 1.4rem;
+        padding-bottom: 0.75rem;
+        display: flex;
+        align-items: center;
+        svg{
+            background: yellow;
+            display: block;
+            height: 1.2rem;
+            margin-left: 1.3rem;
+        }
+
+        .logo-container{
+            background: #8fe4af;               
+                img{
+                    background: pink;
+                    display: block;
+                    margin: auto;
+                }
+            }
+    }
+    .end-header{
+        height: 16rem;
+        
+    }
+}
+
+
+

@@ -1,0 +1,190 @@
+//variables
+$color-primary:rgb(147, 86, 220);
+$color-secondary:rgb(255, 121, 218);
+$color-third:#99e2d0;
+
+// bloc presentation
+.call-to-action{
+    background: #f6f6f6f6;
+    text-align: center;
+
+    p{
+        font-size: 1.1rem;
+        margin: 1.5rem 0;
+    }
+    button{
+        margin-top: 0.5rem;
+        border-radius: 1.5rem;
+        padding: 1rem 1.5rem;
+        background: reg($color-primary);
+        background: linear-gradient(0deg,$color-primary 0%,
+        $color-secondary 100%);
+        box-shadow: 0 5px 5px #c7c7c7;
+        font-size: 1rem;
+        border: none;
+        color: white;
+        &:hover{
+            background: linear-gradient(0deg,$color-secondary 0%,
+            $color-primary 100%);
+        }
+    }
+}
+
+.navigation{
+    padding: 3rem 1.25rem;   
+        
+    ul{
+    margin-top: 2.75rem;
+    list-style: none;
+        li {
+
+            margin-bottom: 1.5rem;
+            &:last-child {
+            margin-bottom: 0; // dernier élément ne contient pas margin-bottom
+                }
+
+        a{
+           text-decoration: none;
+           color: black;
+            display: flex;
+            align-items: center;
+                
+                .circle-base{
+                background: $color-primary;
+                border-radius: 100%;
+                width: 1.5rem;
+                height: 1.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 1000;
+                }
+                .classement{
+                    font-size: 0.8rem;
+                    font-weight: bold;
+                    color: white;
+                }
+                .icone-et-tache{
+                    background: #f6f6f6;
+                    box-shadow: 0 5px 5px #ececec;
+                    border-radius: 15px;
+                    align-items: center;
+                    margin-left: -0.7rem;
+                    width: 100%;
+                    padding-top: 1.75rem;
+                    padding-bottom: 2rem;
+                    display: flex;
+                    &:hover {
+                        background: #f5edff;
+                        
+                        svg {
+                            color: $color-primary;
+                        }             
+                    }
+                    
+                svg{
+                    height: 1.25rem;
+                    margin-right: 2rem;
+                    margin-left: 1.5rem;
+                    color: #7e7e7e;
+                }
+                    
+                p{
+                    font-size: 1rem;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    }    
+}
+    
+
+// bloc des différents plats
+.articles{
+    background:#f6f6f6;
+    padding: 3.7rem 1.25rem 4rem 1.25rem;
+
+
+    h2 {
+    margin-bottom: 1.8rem;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    .card{         
+        background:#ffffff;
+        box-shadow: 0 5px 5px #ececec;
+        border-radius: 1rem ;
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 1.1rem;
+        &:last-child{
+            margin-bottom: 0;
+        }
+   
+        .card-img{
+            width: 100%;
+
+        img{
+            display: block;
+            height: 174px;
+            width: 100%;
+            object-fit: cover;
+            object-position: bottom center;
+            } 
+        }
+        .card-body{
+            // background: green;
+            padding: 0.5rem 1rem;
+            display: flex;
+            
+            .card-text{
+                // background: yellow;
+                //flex: 1 1 0;//Occupe l'espace restant de la div parent (Flex)
+            p{
+                font-size: 14px;
+            }
+            }
+
+            .wish-list-icon {
+                margin-left: auto;
+
+                svg {
+                    height: 1.5rem;
+                }
+
+                .wish-list-icon1{
+                    display: block;
+                }
+
+                .wish-list-icon2{
+                    display: none;
+                    color: $color-primary;
+                }
+
+                &:hover {
+                    .wish-list-icon1{
+                        display: none;
+                    }
+                    .wish-list-icon2{
+                        display: block;
+                    }
+                
+                }
+            }
+        }
+
+        .badge {
+            background-color: $color-third;
+            position: absolute;
+            top: 0.75rem;
+            right: 0.75rem;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            color: #008766;
+            font-weight: bold;
+        }
+    }
+}

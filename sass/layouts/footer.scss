@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&family=Roboto&family=Shrikhand&display=swap');
+
+
+
+// version smartphone
+.footer-page{
+    background: #353535;
+    padding-top: 1.75rem;
+    padding-bottom: 2.5rem;
+    padding-left: 1.25rem;
+    color: white;
+    font-weight: bold;
+
+    h3{
+        font-family: 'Shrikhand', cursive;
+        margin-bottom: 1.5rem;
+    }
+    .footer-infos{
+        line-height: 1.5rem;
+        .footer_page_info{
+        display: flex;
+        align-items: center;
+        svg{
+            height: 0.75rem;
+            margin-right: 0.5rem;
+        }
+    }
+    }
+    
+}

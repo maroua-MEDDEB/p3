@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&family=Roboto&display=swap');
+
+$body_couleur: #ffffff;
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body{
+    background: $body_couleur;
+    font-family: 'Roboto', sans-serif;
+}

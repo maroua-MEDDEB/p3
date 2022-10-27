@@ -1,0 +1,155 @@
+.call-to-action {
+  background: rgba(246, 246, 246, 0.9647058824);
+  text-align: center;
+}
+.call-to-action p {
+  font-size: 1.1rem;
+  margin: 1.5rem 0;
+}
+.call-to-action button {
+  margin-top: 0.5rem;
+  border-radius: 1.5rem;
+  padding: 1rem 1.5rem;
+  background: reg(rgb(147, 86, 220));
+  background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  box-shadow: 0 5px 5px #c7c7c7;
+  font-size: 1rem;
+  border: none;
+  color: white;
+}
+.call-to-action button:hover {
+  background: linear-gradient(0deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+}
+
+.navigation {
+  padding: 3rem 1.25rem;
+}
+.navigation ul {
+  margin-top: 2.75rem;
+  list-style: none;
+}
+.navigation ul li {
+  margin-bottom: 1.5rem;
+}
+.navigation ul li:last-child {
+  margin-bottom: 0;
+}
+.navigation ul li a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+}
+.navigation ul li a .circle-base {
+  background: rgb(147, 86, 220);
+  border-radius: 100%;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.navigation ul li a .classement {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: white;
+}
+.navigation ul li a .icone-et-tache {
+  background: #f6f6f6;
+  box-shadow: 0 5px 5px #ececec;
+  border-radius: 15px;
+  align-items: center;
+  margin-left: -0.7rem;
+  width: 100%;
+  padding-top: 1.75rem;
+  padding-bottom: 2rem;
+  display: flex;
+}
+.navigation ul li a .icone-et-tache:hover {
+  background: #f5edff;
+}
+.navigation ul li a .icone-et-tache:hover svg {
+  color: rgb(147, 86, 220);
+}
+.navigation ul li a .icone-et-tache svg {
+  height: 1.25rem;
+  margin-right: 2rem;
+  margin-left: 1.5rem;
+  color: #7e7e7e;
+}
+.navigation ul li a .icone-et-tache p {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.articles {
+  background: #f6f6f6;
+  padding: 3.7rem 1.25rem 4rem 1.25rem;
+}
+.articles h2 {
+  margin-bottom: 1.8rem;
+}
+.articles a {
+  text-decoration: none;
+  color: black;
+}
+.articles .card {
+  background: #ffffff;
+  box-shadow: 0 5px 5px #ececec;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 1.1rem;
+}
+.articles .card:last-child {
+  margin-bottom: 0;
+}
+.articles .card .card-img {
+  width: 100%;
+}
+.articles .card .card-img img {
+  display: block;
+  height: 174px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: bottom center;
+     object-position: bottom center;
+}
+.articles .card .card-body {
+  padding: 0.5rem 1rem;
+  display: flex;
+}
+.articles .card .card-body .card-text p {
+  font-size: 14px;
+}
+.articles .card .card-body .wish-list-icon {
+  margin-left: auto;
+}
+.articles .card .card-body .wish-list-icon svg {
+  height: 1.5rem;
+}
+.articles .card .card-body .wish-list-icon .wish-list-icon1 {
+  display: block;
+}
+.articles .card .card-body .wish-list-icon .wish-list-icon2 {
+  display: none;
+  color: rgb(147, 86, 220);
+}
+.articles .card .card-body .wish-list-icon:hover .wish-list-icon1 {
+  display: none;
+}
+.articles .card .card-body .wish-list-icon:hover .wish-list-icon2 {
+  display: block;
+}
+.articles .card .badge {
+  background-color: #99e2d0;
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  color: #008766;
+  font-weight: bold;
+}/*# sourceMappingURL=container.css.map */
