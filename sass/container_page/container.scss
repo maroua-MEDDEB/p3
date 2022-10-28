@@ -82,9 +82,8 @@ $color-third:#99e2d0;
                         }             
                     }
                     
-                svg{
-                    height: 1.25rem;
-                    margin-right: 2rem;
+                i{
+                    margin-right: 1rem;
                     margin-left: 1.5rem;
                     color: #7e7e7e;
                 }
@@ -151,24 +150,24 @@ $color-third:#99e2d0;
             .wish-list-icon {
                 margin-left: auto;
 
-                svg {
+                i {
                     height: 1.5rem;
                 }
 
-                .wish-list-icon1{
+                .fa-regular{
                     display: block;
                 }
 
-                .wish-list-icon2{
+                .fa-sharp{
                     display: none;
                     color: $color-primary;
                 }
 
                 &:hover {
-                    .wish-list-icon1{
+                    .fa-regular{
                         display: none;
                     }
-                    .wish-list-icon2{
+                    .fa-sharp{
                         display: block;
                     }
                 
