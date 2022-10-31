@@ -72,9 +72,8 @@
 .navigation ul li a .icone-et-tache:hover svg {
   color: rgb(147, 86, 220);
 }
-.navigation ul li a .icone-et-tache svg {
-  height: 1.25rem;
-  margin-right: 2rem;
+.navigation ul li a .icone-et-tache i {
+  margin-right: 1rem;
   margin-left: 1.5rem;
   color: #7e7e7e;
 }
@@ -127,20 +126,20 @@
 .articles .card .card-body .wish-list-icon {
   margin-left: auto;
 }
-.articles .card .card-body .wish-list-icon svg {
+.articles .card .card-body .wish-list-icon i {
   height: 1.5rem;
 }
-.articles .card .card-body .wish-list-icon .wish-list-icon1 {
+.articles .card .card-body .wish-list-icon .fa-regular {
   display: block;
 }
-.articles .card .card-body .wish-list-icon .wish-list-icon2 {
+.articles .card .card-body .wish-list-icon .fa-sharp {
   display: none;
   color: rgb(147, 86, 220);
 }
-.articles .card .card-body .wish-list-icon:hover .wish-list-icon1 {
+.articles .card .card-body .wish-list-icon:hover .fa-regular {
   display: none;
 }
-.articles .card .card-body .wish-list-icon:hover .wish-list-icon2 {
+.articles .card .card-body .wish-list-icon:hover .fa-sharp {
   display: block;
 }
 .articles .card .badge {

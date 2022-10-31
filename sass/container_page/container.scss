@@ -24,6 +24,7 @@
         &:hover{
             background: linear-gradient(0deg,$color-secondary 0%,
             $color-primary 100%);
+            cursor: grab;
         }
     }
 }
@@ -75,7 +76,7 @@
                     &:hover {
                         background: #f5edff;
                         
-                        svg {
+                        i {
                             color: $color-primary;
                         }             
                     }

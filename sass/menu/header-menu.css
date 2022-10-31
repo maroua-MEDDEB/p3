@@ -1,28 +1,33 @@
 .header-container {
-  background: #eaeaea;
+  background: rgba(246, 246, 246, 0.9647058824);
 }
 
 .header-container .top-header {
-  background: red;
   padding-top: 1.4rem;
   padding-bottom: 0.75rem;
   display: flex;
   align-items: center;
 }
-.header-container .top-header svg {
-  background: yellow;
+.header-container .top-header a {
+  text-decoration: none;
+  color: black;
+}
+.header-container .top-header a i {
   display: block;
   height: 1.2rem;
   margin-left: 1.3rem;
 }
 .header-container .top-header .logo-container {
-  background: #8fe4af;
+  flex: 1 1 0;
+  height: 30px;
 }
 .header-container .top-header .logo-container img {
-  background: pink;
   display: block;
   margin: auto;
 }
-.header-container .end-header {
-  height: 16rem;
+.header-container .end-header img {
+  height: 258px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=header-menu.css.map */

@@ -1,36 +1,43 @@
 // version smartphone
 .header-container{
-    background: #eaeaea;
+    background: #f6f6f6f6;
 }
 
 .header-container{
     .top-header{
-        background: red;
         padding-top: 1.4rem;
         padding-bottom: 0.75rem;
         display: flex;
         align-items: center;
-        svg{
-            background: yellow;
+        a{
+            text-decoration: none;
+            color: black;
+          i{
             display: block;
             height: 1.2rem;
             margin-left: 1.3rem;
+        }  
         }
-
+        
         .logo-container{
-            background: #8fe4af;               
+            flex: 1 1 0;
+            height: 30px;
                 img{
-                    background: pink;
                     display: block;
                     margin: auto;
                 }
             }
     }
-    .end-header{
-        height: 16rem;
+    .end-header {
+        img {
+                height: 258px;
+                width: 100%;
+                object-fit: cover;
+        }
         
     }
 }
+
 
 
 

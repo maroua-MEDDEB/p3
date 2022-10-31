@@ -1,0 +1,79 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&family=Roboto&family=Shrikhand&display=swap");
+section {
+  background: #f6f6f6;
+  border-top-left-radius: 35px;
+  border-top-right-radius: 35px;
+  margin-top: -50px;
+  position: relative;
+  padding: 2.5rem 0.7rem 3rem 0.8rem;
+}
+section .title-container {
+  display: flex;
+  align-items: center;
+  flex: 1 1 0;
+  padding-right: 2rem;
+}
+section .title-container h2 {
+  margin-left: 0.5rem;
+  font-family: Shrikhand;
+}
+section .title-container i {
+  margin-left: auto;
+  font-size: 1.5rem;
+}
+section .body-container {
+  padding-top: 2rem;
+}
+section .body-container article {
+  margin-top: 2.5rem;
+}
+section .body-container article:first-child {
+  margin-top: 0;
+}
+section .body-container article .text {
+  margin-left: 0.5rem;
+  border-bottom: 2px solid #99e2d0;
+  padding-bottom: 0.5rem;
+  width: 40px;
+}
+section .body-container article .detail {
+  margin-top: 1rem;
+  background: #ffffff;
+  box-shadow: 0 5px 5px #ececec;
+  border-radius: 15px;
+  padding: 16px 24px 10px 12px;
+  line-height: 25px;
+}
+section .body-container article .detail .detail-text-price {
+  display: flex;
+  flex: 1 1 0;
+}
+section .body-container article .detail .detail-text-price .text-detail {
+  white-space: nowrap; /* Empeche le texte de retourner à la ligne */
+  overflow: hidden; /* Masquer le texte qui dépasse la limite de la ligne */
+  text-overflow: ellipsis; /* Remplacer la partie non visible du texte par ...*/
+  font-size: 13px;
+}
+section .body-container article .detail .detail-text-price .price {
+  font-weight: bold;
+  margin-left: auto;
+  margin-left: 2rem;
+}
+section button {
+  margin: 3rem auto 0;
+  display: block;
+  border-radius: 1.5rem;
+  padding: 1rem 3rem;
+  background: reg(rgb(147, 86, 220));
+  background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  box-shadow: 0 5px 5px #c7c7c7;
+  font-size: 1rem;
+  border: none;
+  color: white;
+}
+section button:hover {
+  background: linear-gradient(0deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+  cursor: -webkit-grab;
+  cursor: grab;
+}/*# sourceMappingURL=container-menu.css.map */
