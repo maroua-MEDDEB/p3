@@ -2,82 +2,87 @@
 @import url($ul-writing-style);
 
 section{
-    background: rgb(93, 93, 243);
+    background: #f6f6f6;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    margin-top: -50px;
+    position: relative;
     padding: 2.5rem 0.7rem 3rem 0.8rem;
 
 
-    .title-container{
-        display: flex;
-        align-items: center;
-        flex: 1 1 0;
-        padding-right: 2rem;
+.title-container{
+    display: flex;
+    align-items: center;
+    flex: 1 1 0;
+    padding-right: 2rem;
 
-        h2{
-            margin-left: 0.5rem;
-            font-family: $logo-titre;
-            
-        }
-        i{
-            margin-left: auto;
-
-        }
+    h2{
+        margin-left: 0.5rem;
+        font-family: $logo-titre;
+        
     }
+    i{
+        margin-left: auto;
+        font-size: 1.5rem;
+    }
+}
 
-    .body-container{
-        padding-top: 2rem;
+.body-container{
+    padding-top: 2rem;
 
-        article{
-            margin-top: 2.5rem;
-            &:first-child{
-                margin-top: 0;
-            }
-            .text{
-                margin-left: 0.5rem;
-                border-bottom: 2px solid $color-third;
-                padding-bottom: 0.5rem;
-                width: 40px;
-            }
-            .detail{
-                margin-top: 1rem;
-                background: #ffffff ;
-                box-shadow: 0 5px 5px #ececec;
-                border-radius: 15px;
-                padding: 16px 24px 10px 12px;
-                line-height: 25px;
-            
-                .detail-text-price{ 
-                    display: flex;
-                    flex: 1 1 0;
-                    .text-detail{
-                        white-space: nowrap; /* Empeche le texte de retourner à la ligne */ 
-                        overflow: hidden; /* Masquer le texte qui dépasse la limite de la ligne */
-                        text-overflow: ellipsis; /* Remplacer la partie non visible du texte par ...*/
-                        font-size: 13px;
-                    }
-                    .price{
-                        font-weight: bold;
-                        margin-left: auto;
-                        margin-left: 2rem;
-                    }
+    article{
+        margin-top: 2.5rem;
+        &:first-child{
+            margin-top: 0;
+        }
+        .text{
+            margin-left: 0.5rem;
+            border-bottom: 2px solid $color-third;
+            padding-bottom: 0.5rem;
+            width: 40px;
+        }
+        .detail{
+            margin-top: 1rem;
+            background: #ffffff ;
+            box-shadow: 0 5px 5px #ececec;
+            border-radius: 15px;
+            padding: 16px 24px 10px 12px;
+            line-height: 25px;
+           
+            .detail-text-price{ 
+                display: flex;
+                flex: 1 1 0;
+                .text-detail{
+                    white-space: nowrap; /* Empeche le texte de retourner à la ligne */ 
+                    overflow: hidden; /* Masquer le texte qui dépasse la limite de la ligne */
+                    text-overflow: ellipsis; /* Remplacer la partie non visible du texte par ...*/
+                    font-size: 13px;
+                }
+                .price{
+                    font-weight: bold;
+                    margin-left: auto;
+                    margin-left: 2rem;
                 }
             }
         }
     }
-    button{
-        margin: 3rem auto ;
-        display: block;
-        border-radius: 1.5rem;
-        padding: 1rem 3rem;
-        background: reg($color-primary);
-        background: linear-gradient(0deg,$color-primary 0%,
-        $color-secondary 100%);
-        box-shadow: 0 5px 5px #c7c7c7;
-        font-size: 1rem;
-        border: none;
-        color: white;
-        &:hover{
-            background: linear-gradient(0deg,$color-secondary 0%,
-            $color-primary 100%);
-        }
+}
+button{
+    margin: 3rem auto 0;
+    display: block;
+    border-radius: 1.5rem;
+    padding: 1rem 3rem;
+    background: reg($color-primary);
+    background: linear-gradient(0deg,$color-primary 0%,
+    $color-secondary 100%);
+    box-shadow: 0 5px 5px #c7c7c7;
+    font-size: 1rem;
+    border: none;
+    color: white;
+    &:hover{
+        background: linear-gradient(0deg,$color-secondary 0%,
+        $color-primary 100%);
+        cursor: grab;
     }
+}
 }
