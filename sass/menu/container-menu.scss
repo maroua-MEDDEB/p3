@@ -7,31 +7,26 @@ section{
 
 
     .title-container{
-        background: pink;
         display: flex;
         align-items: center;
         flex: 1 1 0;
         padding-right: 2rem;
 
         h2{
-            background: red;
             margin-left: 0.5rem;
             font-family: $logo-titre;
             
         }
         i{
-            background: yellow;
             margin-left: auto;
 
         }
     }
 
     .body-container{
-        background: greenyellow;
         padding-top: 2rem;
 
         article{
-            background: rgb(222, 120, 120);
             margin-top: 2.5rem;
             &:first-child{
                 margin-top: 0;
