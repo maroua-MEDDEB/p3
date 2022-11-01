@@ -41,13 +41,11 @@ section{
             padding-bottom: 0.5rem;
             width: 40px;
         }
+
         .detail{
-            margin-top: 1rem;
-            background: #ffffff ;
-            box-shadow: 0 5px 5px #ececec;
-            border-radius: 15px;
             padding: 16px 24px 10px 12px;
             line-height: 25px;
+            flex: 1 1 0;
            
             .detail-text-price{ 
                 display: flex;
@@ -58,6 +56,7 @@ section{
                     text-overflow: ellipsis; /* Remplacer la partie non visible du texte par ...*/
                     font-size: 13px;
                 }
+
                 .price{
                     font-weight: bold;
                     margin-left: auto;
@@ -67,6 +66,7 @@ section{
         }
     }
 }
+
 button{
     margin: 3rem auto 0;
     display: block;
@@ -85,4 +85,38 @@ button{
         cursor: grab;
     }
 }
+}
+
+.item-detail {
+    display: flex;
+    margin-top: 1rem;
+    background: #ffffff ;
+    box-shadow: 0 5px 5px #ececec;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+
+    .badge_animation {
+        width: 0;
+        background: $color-third;
+        display: flex;
+        margin-left: 59px;
+        transition: width 0.5s linear;
+    
+        i {
+            color: #ffffff;
+            font-size: 25px;
+            margin: auto;
+            transform: rotate(90deg);
+            transition: transform 0.5s linear;
+        }
+    }
+
+    &:hover .badge_animation {
+        width: 59px;
+    }
+
+    &:hover i {
+        transform: rotate(0deg);
+    }
 }

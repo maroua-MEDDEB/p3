@@ -1,6 +1,8 @@
 .call-to-action {
   background: rgba(246, 246, 246, 0.9647058824);
   text-align: center;
+  padding-top: 2.75rem;
+  padding-bottom: 3.5rem;
 }
 .call-to-action p {
   font-size: 1.1rem;
@@ -19,6 +21,8 @@
 }
 .call-to-action button:hover {
   background: linear-gradient(0deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+  cursor: -webkit-grab;
+  cursor: grab;
 }
 
 .navigation {
@@ -69,7 +73,7 @@
 .navigation ul li a .icone-et-tache:hover {
   background: #f5edff;
 }
-.navigation ul li a .icone-et-tache:hover svg {
+.navigation ul li a .icone-et-tache:hover i {
   color: rgb(147, 86, 220);
 }
 .navigation ul li a .icone-et-tache i {
