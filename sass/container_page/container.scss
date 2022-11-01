@@ -1,11 +1,12 @@
 //importer les variables variables
-@import 'variables.scss';
+@import '../variables.scss';
 
 // bloc presentation
 .call-to-action{
     background: #f6f6f6f6;
     text-align: center;
-
+    padding-top: 2.75rem;
+    padding-bottom: 3.5rem;
     p{
         font-size: 1.1rem;
         margin: 1.5rem 0;
@@ -24,7 +25,7 @@
         &:hover{
             background: linear-gradient(0deg,$color-secondary 0%,
             $color-primary 100%);
-            cursor: grab;
+            cursor:grab;
         }
     }
 }
