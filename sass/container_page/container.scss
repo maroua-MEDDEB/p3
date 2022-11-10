@@ -1,6 +1,9 @@
 //importer les variables variables
 @import '../variables.scss';
+@import '../style.scss';
 
+
+/* version smartphone */
 // bloc presentation
 .call-to-action{
     background: #f6f6f6f6;
@@ -25,39 +28,35 @@
         &:hover{
             background: linear-gradient(0deg,$color-secondary 0%,
             $color-primary 100%);
-            cursor:grab;
+            cursor:pointer;
         }
     }
 }
 
 .navigation{
-    padding: 3rem 1.25rem;   
-        
-    ul{
-    margin-top: 2.75rem;
-    list-style: none;
+    padding: 3rem 1.25rem;         
+    ul {
+        margin-top: 2.75rem;
+        list-style: none;
         li {
-
             margin-bottom: 1.5rem;
             &:last-child {
             margin-bottom: 0; // dernier élément ne contient pas margin-bottom
                 }
-
-        a{
-           text-decoration: none;
-           color: black;
-            display: flex;
-            align-items: center;
-                
-                .circle-base{
-                background: $color-primary;
-                border-radius: 100%;
-                width: 1.5rem;
-                height: 1.5rem;
+            a {
+                text-decoration: none;
+                color: black;
                 display: flex;
                 align-items: center;
-                justify-content: center;
-                z-index: 1000;
+                .circle-base{
+                    background: $color-primary;
+                    border-radius: 100%;
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 1000;
                 }
                 .classement{
                     font-size: 0.8rem;
@@ -76,114 +75,192 @@
                     display: flex;
                     &:hover {
                         background: #f5edff;
-                        
                         i {
                             color: $color-primary;
                         }             
                     }
-                    
-                i{
-                    margin-right: 1rem;
-                    margin-left: 1.5rem;
-                    color: #7e7e7e;
-                }
-                    
-                p{
-                    font-size: 1rem;
-                    font-weight: bold;
+                    i{
+                        margin-right: 1rem;
+                        margin-left: 1.5rem;
+                        color: #7e7e7e;
+                    }                   
+                    p{
+                        font-size: 1rem;
+                        font-weight: bold;
+                    }
                 }
             }
         }
-    }
-    }    
+    }  
 }
-    
-
+        
 // bloc des différents plats
-.articles{
+.articles {
     background:#f6f6f6;
     padding: 3.7rem 1.25rem 4rem 1.25rem;
-
-
+    
     h2 {
-    margin-bottom: 1.8rem;
+        margin-bottom: 1.8rem;
     }
-    a{
-        text-decoration: none;
-        color: black;
-    }
-    .card{         
-        background:#ffffff;
-        box-shadow: 0 5px 5px #ececec;
-        border-radius: 1rem ;
-        overflow: hidden;
-        position: relative;
-        margin-bottom: 1.1rem;
-        &:last-child{
-            margin-bottom: 0;
-        }
-   
-        .card-img{
+
+    article {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -0.5rem;
+        margin-right: -0.5rem;
+    
+        .card {
             width: 100%;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+            margin-bottom: 1rem;
+        
+            .card-content {
+                position: relative;
+                overflow: hidden;
+                box-shadow: 0 5px 5px #ececec;
+                border-radius: 1rem ;
+                background: #ffffff;
 
-        img{
-            display: block;
-            height: 174px;
-            width: 100%;
-            object-fit: cover;
-            object-position: bottom center;
-            } 
-        }
-        .card-body{
-            // background: green;
-            padding: 0.5rem 1rem;
-            display: flex;
-            
-            .card-text{
-                // background: yellow;
-                //flex: 1 1 0;//Occupe l'espace restant de la div parent (Flex)
-            p{
-                font-size: 14px;
-            }
-            }
-
-            .wish-list-icon {
-                margin-left: auto;
-
-                i {
-                    height: 1.5rem;
+                .badge {
+                    background-color: $color-third;
+                    position: absolute;
+                    top: 0.75rem;
+                    right: 0.75rem;
+                    padding: 0.5rem 1rem;
+                    border-radius: 0.25rem;
+                    color: #008766;
+                    font-weight: bold;
                 }
 
-                .fa-regular{
+                .card-img {
                     display: block;
-                }
-
-                .fa-sharp{
-                    display: none;
-                    color: $color-primary;
-                }
-
-                &:hover {
-                    .fa-regular{
-                        display: none;
-                    }
-                    .fa-sharp{
+        
+                    img {
                         display: block;
+                        height: 174px;
+                        width: 100%;
+                        object-fit: cover;
+                        object-position: bottom center;
+                    } 
+                }
+
+                .card-body {
+                    padding: 0.5rem 1rem;
+                    display: flex;
+        
+                    .card-text {
+                        p{
+                            font-size: 14px;
+                        }
                     }
-                
+                    .wish-list-icon {
+                        margin-left: auto;
+
+                        i {
+                            height: 1.5rem;
+                        }
+                        .fa-regular{
+                            display: block;
+                        }
+                        .fa-sharp{
+                            display: none;
+                            color: $color-primary;
+                        }
+                        &:hover {
+                            .fa-regular{
+                                display: none;
+                            }
+                            .fa-sharp{
+                                display: block;
+                            }                
+                        }
+                    }
                 }
             }
         }
+    }//end card-content 
+}
 
-        .badge {
-            background-color: $color-third;
-            position: absolute;
-            top: 0.75rem;
-            right: 0.75rem;
-            padding: 0.5rem 1rem;
-            border-radius: 0.25rem;
-            color: #008766;
-            font-weight: bold;
+/* version tablette */
+@media screen and (min-width:768px){
+     // bloc presentation
+    .call-to-action{
+        background: $body_couleur;  
+    }
+
+    .navigation{
+        background: #f6f6f6f6;
+
+        h2 {
+            text-align: center;
+        }
+
+        ul {
+            display: flex;
+            margin-left: -0.5rem;
+            margin-right: -0.5rem;
+            li {
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;  
+                flex:1 1 0;
+
+                a{
+                flex-direction: column;   
+                    .circle-base{
+                        margin-bottom: -1rem;
+                    }
+                    .icone-et-tache{
+                       background: white;
+                       flex-direction: column;
+                       
+                       .p-text{
+                        margin-top: 1rem;
+                       }
+                    }
+                }
+            }  
         }
     }
+
+    .articles{
+        background:$body-couleur;
+
+        h2 {
+            text-align: center;
+        }
+
+        article {       
+            .card {
+                width: 50%;
+                margin-bottom: 1rem;                   
+            }
+        }
+    }
+}
+
+/* version Desktop */
+@media screen and (min-width:992px){
+    section{
+    .navigation{
+        ul{
+            li{
+                a{
+                    .icone-et-tache{
+                        flex-direction: row;
+                        align-items: flex-end;
+                        justify-content: space-evenly;
+                        }
+                    }
+                }
+            }
+        }
+    .articles{
+        article{
+            .card { 
+                width:25%;
+            }
+        }
+    }
+}
 }

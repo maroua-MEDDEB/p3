@@ -31,8 +31,10 @@
     <section>
         <!--bloc presentation-->
         <div class="call-to-action">
-            <h1>Réservez le menu qui vous convient</h1>
-            <p>Découvrez des restaurants d'excpetion, séléctionnés par nos soins. </p>
+            <div class="call-to-action-text">
+                <h1>Réservez le menu qui vous convient</h1>
+                <p>Découvrez des restaurants d'excpetion, séléctionnés par nos soins. </p>
+            </div>
             <button>Explorer nos restaurants</button>
         </div>
 
@@ -45,7 +47,7 @@
                         <div class="circle-base classement"> 1 </div>
                         <div class="icone-et-tache">
                             <i class="fa-solid fa-mobile-screen-button"></i>
-                            <p>Choisissez un restaurant</p>
+                            <p class="p-text">Choisissez un restaurant</p>
                         </div>
                     </a>
                 </li>
@@ -55,7 +57,7 @@
                         <div class="circle-base classement"> 2 </div>
                         <div class="icone-et-tache">
                             <i class="fa-solid fa-list-ul"></i>
-                            <p>Composez votre menu</p>
+                            <p class="p-text">Composez votre menu</p>
                         </div>
                     </a>
                 </li>
@@ -65,7 +67,7 @@
                         <div class="circle-base classement"> 3 </div>
                         <div class="icone-et-tache">
                             <i class="fa-solid fa-store"></i>
-                            <p>Dégustez au restaurant</p>
+                            <p class="p-text">Dégustez au restaurant</p>
                         </div>
                     </a>
                 </li>
@@ -77,11 +79,11 @@
             <h2>Restaurants</h2>
             <article>
                 <div class="card">
-                    <a href="./sass/menu/menu.html">
+                    <div class="card-content">
                         <div class="badge">Nouveau</div>
-                        <div class="card-img">
+                        <a class="card-img" href="./sass/menu/menu.html">
                             <img src="./images/palette_du_gout.jpg" alt="palette du goût">
-                        </div>
+                        </a>
                         <div class="card-body">
                             <div class="card-text">
                                 <h4>La palette du goût</h4>
@@ -92,14 +94,15 @@
                                 <i class="fa-sharp fa-solid fa-heart"></i>
                             </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
+
                 <div class="card">
-                    <a href="./sass/menu/menu-note-enchante.html">
+                    <div class="card-content">
                         <div class="badge">Nouveau</div>
-                        <div class="card-img">
+                        <a class="card-img" href="./sass/menu/menu-note-enchante.html">
                             <img src="./images/note_enchantee.jpg" alt="la note enchantée">
-                        </div>
+                        </a>
                         <div class="card-body">
                             <div class="card-text">
                                 <h4>La note enchantée</h4>
@@ -110,14 +113,15 @@
                                 <i class="fa-sharp fa-solid fa-heart"></i>
                             </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
 
                 <div class="card">
-                    <a href="./sass/menu/menu-a-la-française.html">
-                        <div class="card-img">
+                    <div class="card-content">
+                        <a class="card-img" href="./sass/menu/menu-a-la-française.html">
                             <img src="./images/a_la_française.jpg" alt="la note enchantée">
-                        </div>
+                        </a>
+
                         <div class="card-body">
                             <div class="card-text">
                                 <h4>A la française</h4>
@@ -128,14 +132,14 @@
                                 <i class="fa-sharp fa-solid fa-heart"></i>
                             </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
 
                 <div class="card">
-                    <a href="./sass/menu/menu-delice-sens.html">
-                        <div class="card-img">
+                    <div class="card-content">
+                        <a class="card-img" href="./sass/menu/menu-delice-sens.html">
                             <img src="./images/delice_des_sens.jpg" alt="la note enchantée">
-                        </div>
+                        </a>
                         <div class="card-body">
                             <div class="card-text">
                                 <h4>Le délices des sens</h4>
@@ -146,7 +150,7 @@
                                 <i class="fa-sharp fa-solid fa-heart"></i>
                             </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
             </article>
         </div>

@@ -21,4 +21,17 @@
 .footer-page .footer-infos .footer_page_info i {
   height: 0.75rem;
   margin-right: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-page {
+    display: flex;
+    padding-bottom: 0;
+  }
+  .footer-page .footer-infos {
+    display: flex;
+    flex: 1 1 0;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
 }/*# sourceMappingURL=footer.css.map */

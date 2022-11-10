@@ -1,3 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ffffff;
+  font-family: "Roboto", sans-serif;
+}
+
+/* version smartphone */
 .call-to-action {
   background: rgba(246, 246, 246, 0.9647058824);
   text-align: center;
@@ -21,8 +34,7 @@
 }
 .call-to-action button:hover {
   background: linear-gradient(0deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
-  cursor: -webkit-grab;
-  cursor: grab;
+  cursor: pointer;
 }
 
 .navigation {
@@ -93,60 +105,26 @@
 .articles h2 {
   margin-bottom: 1.8rem;
 }
-.articles a {
-  text-decoration: none;
-  color: black;
+.articles article {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
 }
-.articles .card {
-  background: #ffffff;
+.articles article .card {
+  width: 100%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin-bottom: 1rem;
+}
+.articles article .card .card-content {
+  position: relative;
+  overflow: hidden;
   box-shadow: 0 5px 5px #ececec;
   border-radius: 1rem;
-  overflow: hidden;
-  position: relative;
-  margin-bottom: 1.1rem;
+  background: #ffffff;
 }
-.articles .card:last-child {
-  margin-bottom: 0;
-}
-.articles .card .card-img {
-  width: 100%;
-}
-.articles .card .card-img img {
-  display: block;
-  height: 174px;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: bottom center;
-     object-position: bottom center;
-}
-.articles .card .card-body {
-  padding: 0.5rem 1rem;
-  display: flex;
-}
-.articles .card .card-body .card-text p {
-  font-size: 14px;
-}
-.articles .card .card-body .wish-list-icon {
-  margin-left: auto;
-}
-.articles .card .card-body .wish-list-icon i {
-  height: 1.5rem;
-}
-.articles .card .card-body .wish-list-icon .fa-regular {
-  display: block;
-}
-.articles .card .card-body .wish-list-icon .fa-sharp {
-  display: none;
-  color: rgb(147, 86, 220);
-}
-.articles .card .card-body .wish-list-icon:hover .fa-regular {
-  display: none;
-}
-.articles .card .card-body .wish-list-icon:hover .fa-sharp {
-  display: block;
-}
-.articles .card .badge {
+.articles article .card .card-content .badge {
   background-color: #99e2d0;
   position: absolute;
   top: 0.75rem;
@@ -155,4 +133,99 @@
   border-radius: 0.25rem;
   color: #008766;
   font-weight: bold;
+}
+.articles article .card .card-content .card-img {
+  display: block;
+}
+.articles article .card .card-content .card-img img {
+  display: block;
+  height: 174px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: bottom center;
+     object-position: bottom center;
+}
+.articles article .card .card-content .card-body {
+  padding: 0.5rem 1rem;
+  display: flex;
+}
+.articles article .card .card-content .card-body .card-text p {
+  font-size: 14px;
+}
+.articles article .card .card-content .card-body .wish-list-icon {
+  margin-left: auto;
+}
+.articles article .card .card-content .card-body .wish-list-icon i {
+  height: 1.5rem;
+}
+.articles article .card .card-content .card-body .wish-list-icon .fa-regular {
+  display: block;
+}
+.articles article .card .card-content .card-body .wish-list-icon .fa-sharp {
+  display: none;
+  color: rgb(147, 86, 220);
+}
+.articles article .card .card-content .card-body .wish-list-icon:hover .fa-regular {
+  display: none;
+}
+.articles article .card .card-content .card-body .wish-list-icon:hover .fa-sharp {
+  display: block;
+}
+
+/* version tablette */
+@media screen and (min-width: 768px) {
+  .call-to-action {
+    background: #ffffff;
+  }
+  .navigation {
+    background: rgba(246, 246, 246, 0.9647058824);
+  }
+  .navigation h2 {
+    text-align: center;
+  }
+  .navigation ul {
+    display: flex;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
+  .navigation ul li {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    flex: 1 1 0;
+  }
+  .navigation ul li a {
+    flex-direction: column;
+  }
+  .navigation ul li a .circle-base {
+    margin-bottom: -1rem;
+  }
+  .navigation ul li a .icone-et-tache {
+    background: white;
+    flex-direction: column;
+  }
+  .navigation ul li a .icone-et-tache .p-text {
+    margin-top: 1rem;
+  }
+  .articles {
+    background: #ffffff;
+  }
+  .articles h2 {
+    text-align: center;
+  }
+  .articles article .card {
+    width: 50%;
+    margin-bottom: 1rem;
+  }
+}
+/* version Desktop */
+@media screen and (min-width: 992px) {
+  section .navigation ul li a .icone-et-tache {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-evenly;
+  }
+  section .articles article .card {
+    width: 25%;
+  }
 }/*# sourceMappingURL=container.css.map */
