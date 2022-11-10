@@ -2,7 +2,6 @@
 @import url($ul-writing-style);
 
 section{
-    border: 2px solid green;
     background: #f6f6f6;
     border-top-left-radius: 35px;
     border-top-right-radius: 35px;
@@ -156,8 +155,6 @@ section{
 
 //version desktop
 @media screen and (min-width:992px){
-    section{
-
-    }
+   
 }
 
