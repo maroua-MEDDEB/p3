@@ -1,5 +1,6 @@
 @import'../variables.scss';
 @import url($ul-writing-style);
+@import '../container_page/container.scss';
 
 section{
     background: #f6f6f6;
@@ -17,21 +18,8 @@ section{
             margin-left: 0.5rem;
             font-family: $logo-titre;   
         }
-        i{
-            margin-left: auto;
-            font-size: 1.5rem;
-            animation: animer-coeur 4s linear infinite;
-        }
-        @keyframes animer-coeur {
-            0%{
-                transform: scale(0);
-            }
-            50%{
-                transform: scale(1.1);
-            }
-            100%{
-                transform: scale(0);
-            }
+        .wish-list-icon {
+           @include animation-heart; // inclure le mixin qui correspond aux propropriété de l'animation du coeur après l'inclu du fichier container.scss
         }
     }
 

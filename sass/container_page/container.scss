@@ -5,6 +5,82 @@
 
 /* version smartphone */
 // bloc presentation
+
+.body-loading {
+    background: rgba($color: #C0C0C0, $alpha: 0.7);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    animation: show_body_loading 2s;
+
+    @keyframes show_body_loading {
+        0% {visibility: visible;}
+        100%{visibility: hidden;}
+    }
+
+    .loading-spinner {
+        display: inline-block;
+        position: relative;
+        width: 80px;
+        height: 80px;
+    }
+    
+    .loading-spinner div {
+        position: absolute;
+        border: 4px solid #000;
+        opacity: 1;
+        border-radius: 50%;
+        animation: loading-spinner 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+    }
+      
+    .loading-spinner div:nth-child(2) {
+        animation-delay: -0.5s;
+    }
+    
+    @keyframes loading-spinner {
+        0% {
+          top: 36px;
+          left: 36px;
+          width: 0;
+          height: 0;
+          opacity: 0;
+        }
+        4.9% {
+          top: 36px;
+          left: 36px;
+          width: 0;
+          height: 0;
+          opacity: 0;
+        }
+        5% {
+          top: 36px;
+          left: 36px;
+          width: 0;
+          height: 0;
+          opacity: 1;
+        }
+        100% {
+          top: 0px;
+          left: 0px;
+          width: 72px;
+          height: 72px;
+          opacity: 0;
+        }
+      }
+      
+}
+
+
 .call-to-action{
     background: #f6f6f6f6;
     text-align: center;
@@ -75,11 +151,11 @@
                     display: flex;
                     &:hover {
                         background: #f5edff;
-                        i {
+                        .icone-fonction {
                             color: $color-primary;
                         }             
                     }
-                    i{
+                    .icone-fonction{
                         margin-right: 1rem;
                         margin-left: 1.5rem;
                         color: #7e7e7e;
@@ -95,6 +171,41 @@
 }
         
 // bloc des différents plats
+
+/* déclarer le mixin qui correspond aux propropriété de l'animation du coeur*/
+@mixin animation-heart{
+    margin-left: auto;
+    position: relative;
+
+    i {
+        height: 1.5rem;
+    }
+    .fa-regular{
+        display: block;
+    }
+    .fa-sharp{
+        position: absolute;
+        top: 0;
+        left:0;
+        opacity: 0;
+        background-clip: text;
+        color: transparent;
+        background-image: linear-gradient(0deg,$color-secondary 0%,
+        $color-primary 100%);
+        transition: all 0.5s;
+             
+    }
+    &:hover {
+        .fa-regular{
+            opacity: 1;
+        }
+        .fa-sharp{
+            opacity: 1;
+            transform: scale(1.1);
+        }                
+    }
+}
+
 .articles {
     background:#f6f6f6;
     padding: 3.7rem 1.25rem 4rem 1.25rem;
@@ -155,26 +266,7 @@
                         }
                     }
                     .wish-list-icon {
-                        margin-left: auto;
-
-                        i {
-                            height: 1.5rem;
-                        }
-                        .fa-regular{
-                            display: block;
-                        }
-                        .fa-sharp{
-                            display: none;
-                            color: $color-primary;
-                        }
-                        &:hover {
-                            .fa-regular{
-                                display: none;
-                            }
-                            .fa-sharp{
-                                display: block;
-                            }                
-                        }
+                        @include animation-heart; // inclure le mixin qui correspond aux propropriété de l'animation du coeur
                     }
                 }
             }
