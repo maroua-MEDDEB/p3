@@ -55,7 +55,7 @@ body {
 }
 .body-loading .loading-spinner div {
   position: absolute;
-  border: 4px solid #000;
+  border: 4px solid rgb(147, 86, 220);
   opacity: 1;
   border-radius: 50%;
   -webkit-animation: loading-spinner 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
@@ -414,6 +414,26 @@ section .body-container article .text {
   border-bottom: 2px solid #99e2d0;
   padding-bottom: 0.5rem;
   width: 40px;
+}
+section .body-container article .item1 {
+  -webkit-animation: appearance 5s;
+          animation: appearance 5s;
+}
+@-webkit-keyframes appearance {
+  0% {
+    transform: opacity(0), translateY(-500px);
+  }
+  100% {
+    transform: opacity(1), translateY(0);
+  }
+}
+@keyframes appearance {
+  0% {
+    transform: opacity(0), translateY(-500px);
+  }
+  100% {
+    transform: opacity(1), translateY(0);
+  }
 }
 section .body-container article .item-detail {
   display: flex;

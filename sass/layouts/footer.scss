@@ -9,6 +9,9 @@
     padding-left: 1.25rem;
     color: white;
     font-weight: bold;
+    &:hover{
+        cursor: default;
+    }
 
     h3{
         font-family: 'Shrikhand', cursive;
@@ -24,6 +27,11 @@
                 margin-right: 0.5rem;
             }
         }
+        a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
     } 
 }
 
@@ -32,13 +40,12 @@
     .footer-page{
         display: flex;
         padding-bottom: 0;
-
+      
         .footer-infos{
             display: flex;
             flex: 1 1 0;
             align-items: flex-start;
             justify-content: space-around;
-    
         }
     }
 }

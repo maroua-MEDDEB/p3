@@ -7,6 +7,9 @@
   color: white;
   font-weight: bold;
 }
+.footer-page:hover {
+  cursor: default;
+}
 .footer-page h3 {
   font-family: "Shrikhand", cursive;
   margin-bottom: 1.5rem;
@@ -21,6 +24,11 @@
 .footer-page .footer-infos .footer_page_info .icone-footer {
   height: 0.75rem;
   margin-right: 0.5rem;
+}
+.footer-page .footer-infos a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
 }
 
 @media screen and (min-width: 768px) {
