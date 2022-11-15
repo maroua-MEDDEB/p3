@@ -5,9 +5,7 @@
 
 /* version smartphone */
 // bloc presentation
-
-    //déclarer le mixin de la dégradation circulaire de spinner
-
+//loading spinner
 .body-loading {
     background: rgba($color: #C0C0C0, $alpha: 0.7);
     position: fixed;
@@ -82,7 +80,7 @@
       
 }
 
-
+// bloc presentation
 .call-to-action{
     background: #f6f6f6f6;
     text-align: center;
@@ -99,18 +97,21 @@
         background: reg($color-primary);
         background: linear-gradient(0deg,$color-primary 0%,
         $color-secondary 100%);
-        box-shadow: 0 5px 5px #c7c7c7;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
         font-size: 1rem;
         border: none;
         color: white;
+
         &:hover{
             background: linear-gradient(0deg,$color-secondary 0%,
             $color-primary 100%);
             cursor:pointer;
-        }
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.8);
+            }
     }
 }
 
+// bloc fonctionnement
 .navigation{
     padding: 3rem 1.25rem;         
     ul {

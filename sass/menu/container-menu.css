@@ -142,7 +142,7 @@ body {
   padding: 1rem 1.5rem;
   background: reg(rgb(147, 86, 220));
   background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
-  box-shadow: 0 5px 5px #c7c7c7;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
   font-size: 1rem;
   border: none;
   color: white;
@@ -150,6 +150,7 @@ body {
 .call-to-action button:hover {
   background: linear-gradient(0deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
   cursor: pointer;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.8);
 }
 
 .navigation {
@@ -401,87 +402,88 @@ section .title-container .wish-list-icon:hover .fa-sharp {
   transform: scale(1.1);
 }
 section .body-container {
-  padding-top: 2rem;
+  margin-top: 2rem;
 }
 section .body-container article {
   margin-top: 2.5rem;
+  overflow: hidden;
 }
 section .body-container article:first-child {
   margin-top: 0;
 }
-section .body-container article .text {
-  margin-left: 0.5rem;
-  border-bottom: 2px solid #99e2d0;
-  padding-bottom: 0.5rem;
+section .body-container article .title {
+  padding-left: 0.5rem;
+  text-transform: uppercase;
+}
+section .body-container article .title:after {
+  display: block;
+  content: "";
+  height: 2px;
   width: 40px;
+  background: #99e2d0;
+  margin: 0.5rem 0;
 }
-section .body-container article .item1 {
-  -webkit-animation: appearance 5s;
-          animation: appearance 5s;
-}
-@-webkit-keyframes appearance {
-  0% {
-    transform: opacity(0), translateY(-500px);
-  }
-  100% {
-    transform: opacity(1), translateY(0);
-  }
-}
-@keyframes appearance {
-  0% {
-    transform: opacity(0), translateY(-500px);
-  }
-  100% {
-    transform: opacity(1), translateY(0);
-  }
-}
-section .body-container article .item-detail {
+section .body-container article .items {
   display: flex;
-  margin-top: 1rem;
-  background: #ffffff;
-  box-shadow: 0 5px 5px #ececec;
+  flex-direction: column;
+  margin: -1rem -1rem 0.5rem -1rem;
+}
+section .body-container article .items .item {
+  display: flex;
+  flex: 1 1 0;
+  padding: 1rem;
+}
+section .body-container article .items .item .item-content {
+  display: flex;
+  flex: 1 1 0;
   border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
   overflow: hidden;
-  cursor: pointer;
 }
-section .body-container article .item-detail .detail {
+section .body-container article .items .item .detail {
+  flex: 1 1 0;
+  overflow: hidden;
   padding: 16px 24px 10px 12px;
-  line-height: 25px;
-  flex: 1 1 0;
 }
-section .body-container article .item-detail .detail .detail-text-price {
+section .body-container article .items .item .detail h3 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+section .body-container article .items .item .detail .detail-text-price {
   display: flex;
-  flex: 1 1 0;
+  margin-top: 0.5rem;
+  overflow: hidden;
 }
-section .body-container article .item-detail .detail .detail-text-price .text-detail {
+section .body-container article .items .item .detail .detail-text-price .text-detail {
   white-space: nowrap; /* Empeche le texte de retourner à la ligne */
   overflow: hidden; /* Masquer le texte qui dépasse la limite de la ligne */
   text-overflow: ellipsis; /* Remplacer la partie non visible du texte par ...*/
   font-size: 13px;
+  flex: 1 1 0;
 }
-section .body-container article .item-detail .detail .detail-text-price .price {
+section .body-container article .items .item .detail .detail-text-price .price {
   font-weight: bold;
-  margin-left: auto;
   margin-left: 2rem;
 }
-section .body-container article .item-detail .badge_animation {
-  width: 0;
-  background: #99e2d0;
+section .body-container article .items .item .badge_animation {
   display: flex;
-  margin-left: 59px;
+  background: #99e2d0;
+  width: 0;
   transition: width 0.5s linear;
 }
-section .body-container article .item-detail .badge_animation i {
+section .body-container article .items .item .badge_animation i {
   color: #ffffff;
   font-size: 25px;
   margin: auto;
   transform: rotate(90deg);
   transition: transform 0.5s linear;
 }
-section .body-container article .item-detail:hover .badge_animation {
+section .body-container article .items .item:hover .badge_animation {
   width: 59px;
 }
-section .body-container article .item-detail:hover i {
+section .body-container article .items .item:hover i {
   transform: rotate(0deg);
 }
 section button {
@@ -491,14 +493,16 @@ section button {
   padding: 1rem 3rem;
   background: reg(rgb(147, 86, 220));
   background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
-  box-shadow: 0 5px 5px #c7c7c7;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
   font-size: 1rem;
   border: none;
   color: white;
+  cursor: pointer;
+  transition: all 0.5s;
 }
 section button:hover {
   background: linear-gradient(0deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
-  cursor: pointer;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.8);
 }
 
 @media screen and (min-width: 768px) {
@@ -511,20 +515,12 @@ section button:hover {
     max-width: 50%;
     margin: auto;
   }
-  section .body-container {
-    padding-top: 0;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
-    margin-left: -0.5rem;
-    margin-right: -0.5rem;
-  }
-  section .body-container article {
-    flex: 1 1 0;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-  section .body-container article .item-detail {
+  section .body-container article .items .item .item-content {
     background: #f6f6f6;
+  }
+}
+@media screen and (min-width: 992px) {
+  section .body-container article .items {
+    flex-direction: row;
   }
 }/*# sourceMappingURL=container-menu.css.map */

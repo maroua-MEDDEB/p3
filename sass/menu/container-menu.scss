@@ -2,97 +2,131 @@
 @import url($ul-writing-style);
 @import '../container_page/container.scss';
 
-section{
+section {
     background: #f6f6f6;
     border-top-left-radius: 35px;
     border-top-right-radius: 35px;
     margin-top: -50px;
     position: relative;
     padding: 2.5rem 0.7rem 3rem 0.8rem;
+
     .title-container{
         display: flex;
         align-items: center;
         flex: 1 1 0;
         padding-right: 2rem;
-        h2{
+
+        h2 {
             margin-left: 0.5rem;
             font-family: $logo-titre;   
         }
+
         .wish-list-icon {
            @include animation-heart; // inclure le mixin qui correspond aux propropriété de l'animation du coeur après l'inclu du fichier container.scss
         }
     }
 
     .body-container{
-        padding-top: 2rem;
-        article{
+        margin-top: 2rem;
+
+        article {
             margin-top: 2.5rem;
+            overflow: hidden;// La div fille directe va possèder un margin left et right negatif
+
             &:first-child{
-                margin-top: 0;
+                 margin-top: 0;
             }
-            .text{
-                margin-left: 0.5rem;
-                border-bottom: 2px solid $color-third;
-                padding-bottom: 0.5rem;
-                width: 40px;
-            }
-            .item1{
-                
-                animation: appearance 5s;
-            
-            }
-            @keyframes appearance{
-                0%{ transform: opacity(0),translateY(-500px);
-                };
-                100%{transform: opacity(1), translateY(0)}
-            }
-            .item-detail {
+
+            .title {
+                 padding-left: 0.5rem;
+                 text-transform: uppercase;
+
+                 &:after {
+                    display: block;
+                    content: "";
+                    height: 2px;
+                    width: 40px;
+                    background: $color-third;
+                    margin: 0.5rem 0;
+                 }
+             }
+          
+            .items {
                 display: flex;
-                margin-top: 1rem;
-                background: #ffffff ;
-                box-shadow: 0 5px 5px #ececec;
-                border-radius: 15px;
-                overflow: hidden;
-                cursor: pointer;
-                .detail{
-                    padding: 16px 24px 10px 12px;
-                    line-height: 25px;
+                flex-direction: column;
+                margin: -1rem -1rem 0.5rem -1rem;
+                
+                .item {
+                    display: flex;
                     flex: 1 1 0;
-                    .detail-text-price{ 
+                    padding: 1rem;
+
+                    .item-content {
                         display: flex;
                         flex: 1 1 0;
-                        .text-detail{
-                            white-space: nowrap; /* Empeche le texte de retourner à la ligne */ 
-                            overflow: hidden; /* Masquer le texte qui dépasse la limite de la ligne */
-                            text-overflow: ellipsis; /* Remplacer la partie non visible du texte par ...*/
-                            font-size: 13px;
+                        border-radius: 15px;
+                        background: #ffffff ;
+                        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+                        overflow: hidden;
+                    }
+                    //margin-top: 1rem;
+            //         overflow: hidden;
+            //         cursor: pointer;
+    
+                    .detail {
+                        flex: 1 1 0;
+                        overflow: hidden;
+                        padding: 16px 24px 10px 12px;
+
+                        h3 {
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
                         }
-                        .price{
-                            font-weight: bold;
-                            margin-left: auto;
-                            margin-left: 2rem;
+                    
+                        .detail-text-price {
+                            display: flex;
+                            margin-top: 0.5rem;
+                            overflow: hidden;
+                            
+                            .text-detail{
+                                white-space: nowrap; /* Empeche le texte de retourner à la ligne */ 
+                                overflow: hidden; /* Masquer le texte qui dépasse la limite de la ligne */
+                                text-overflow: ellipsis; /* Remplacer la partie non visible du texte par ...*/
+                                font-size: 13px;
+                                flex:  1 1 0;
+                            }
+                        
+                            .price{
+                                font-weight: bold;
+                                margin-left: 2rem;
+                            }
                         }
                     }
-                }            
-                .badge_animation {
-                    width: 0;
-                    background: $color-third;
-                    display: flex;
-                    margin-left: 59px;
-                    transition: width 0.5s linear;              
-                    i {
-                        color: #ffffff;
-                        font-size: 25px;
-                        margin: auto;
-                        transform: rotate(90deg);
-                        transition: transform 0.5s linear;
+
+                    .badge_animation {
+                        display: flex;
+                        background: $color-third;
+                        width: 0;
+                        // margin-left: 59px;
+                        transition: width 0.5s linear; 
+
+                        i {
+                            color: #ffffff;
+                            font-size: 25px;
+                            margin: auto;
+                            transform: rotate(90deg);
+                            transition: transform 0.5s linear;    
+                        }
                     }
-                }           
-                &:hover .badge_animation {
-                    width: 59px;
-                }          
-                &:hover i {
-                    transform: rotate(0deg);
+                        
+                    &:hover .badge_animation {
+                        width: 59px;
+                    }
+                        
+                    &:hover i {
+                            transform: rotate(0deg);
+                    }
                 }
             }
         }
@@ -106,53 +140,61 @@ section{
         background: reg($color-primary);
         background: linear-gradient(0deg,$color-primary 0%,
         $color-secondary 100%);
-        box-shadow: 0 5px 5px #c7c7c7;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
         font-size: 1rem;
         border: none;
         color: white;
-        &:hover{
+        cursor: pointer;
+        transition: all 0.5s;
+
+        &:hover {
             background: linear-gradient(0deg,$color-secondary 0%,
             $color-primary 100%);
-            cursor: pointer;
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.8);
         }
     }
 }
 
 //version tablette
 @media screen and (min-width:768px){
-    section{
+    section {
         border-top-left-radius: 0;
         border-top-right-radius: 0;
-        background: #ffffff;;
-        .title-container{
+        background: #ffffff;
+
+        .title-container {
             max-width: 50%;
             margin: auto;
         }
 
         .body-container{
-            padding-top: 0;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: flex-end;
-            margin-left: -0.5rem;
-            margin-right: -0.5rem;
             article{
-                flex: 1 1 0;
-                padding-left: 0.5rem;
-                padding-right: 0.5rem;
-                
-                .item-detail{
-                    background: #f6f6f6;
-
+                .items{
+                    .item{
+                        .item-content{
+                            background: #f6f6f6;
+                        }
+                    }
                 }
             }
         }
+        
     }
 }
 
 
 //version desktop
 @media screen and (min-width:992px){
-   
+    section{
+        .body-container{
+            article{
+                .items {
+                    flex-direction: row;
+                }
+            }
+        }   
+    }
 }
+
+
 

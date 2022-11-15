@@ -141,7 +141,7 @@ body {
   padding: 1rem 1.5rem;
   background: reg(rgb(147, 86, 220));
   background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
-  box-shadow: 0 5px 5px #c7c7c7;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
   font-size: 1rem;
   border: none;
   color: white;
@@ -149,6 +149,7 @@ body {
 .call-to-action button:hover {
   background: linear-gradient(0deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
   cursor: pointer;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.8);
 }
 
 .navigation {
