@@ -407,9 +407,46 @@ section .body-container {
 section .body-container article {
   margin-top: 2.5rem;
   overflow: hidden;
+  -webkit-animation: slidefood 2s;
+          animation: slidefood 2s;
+  opacity: 0;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 section .body-container article:first-child {
   margin-top: 0;
+}
+@-webkit-keyframes slidefood {
+  0% {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slidefood {
+  0% {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+section .body-container article.first-article {
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+}
+section .body-container article.second-article {
+  -webkit-animation-delay: 250ms;
+          animation-delay: 250ms;
+}
+section .body-container article.sethirdcond-article {
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
 }
 section .body-container article .title {
   padding-left: 0.5rem;
@@ -498,7 +535,7 @@ section button {
   border: none;
   color: white;
   cursor: pointer;
-  transition: all 0.5s;
+  transition: all 1s;
 }
 section button:hover {
   background: linear-gradient(0deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);

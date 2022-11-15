@@ -9,7 +9,7 @@ section {
     margin-top: -50px;
     position: relative;
     padding: 2.5rem 0.7rem 3rem 0.8rem;
-
+    
     .title-container{
         display: flex;
         align-items: center;
@@ -35,6 +35,30 @@ section {
 
             &:first-child{
                  margin-top: 0;
+            }
+            animation: slidefood 2s;
+            opacity: 0;
+            animation-fill-mode: forwards;
+            
+            
+            @keyframes slidefood{
+                0%{
+                    transform: translateY(-30px);
+                    opacity: 0;
+                }
+                100%{
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+            &.first-article{
+                animation-delay: 0;
+            }
+            &.second-article{
+                animation-delay: 250ms;
+            }
+            &.sethirdcond-article{
+                animation-delay: 500ms;
             }
 
             .title {
@@ -132,6 +156,8 @@ section {
         }
     }
 
+
+
     button{
         margin: 3rem auto 0;
         display: block;
@@ -145,7 +171,7 @@ section {
         border: none;
         color: white;
         cursor: pointer;
-        transition: all 0.5s;
+        transition: all 1s;
 
         &:hover {
             background: linear-gradient(0deg,$color-secondary 0%,
