@@ -22,7 +22,7 @@ section {
         }
 
         .wish-list-icon {
-           @include animation-heart; // inclure le mixin qui correspond aux propropriété de l'animation du coeur après l'inclu du fichier container.scss
+           @include animation-heart; // inclure le mixin qui correspond aux propropriété de l'animation du coeur après l'import du fichier container.scss
         }
     }
 
@@ -32,15 +32,14 @@ section {
         article {
             margin-top: 2.5rem;
             overflow: hidden;// La div fille directe va possèder un margin left et right negatif
-
+            padding: 10px;
             &:first-child{
                  margin-top: 0;
             }
             animation: slidefood 2s;
             opacity: 0;
             animation-fill-mode: forwards;
-            
-            
+                       
             @keyframes slidefood{
                 0%{
                     transform: translateY(-30px);
@@ -52,7 +51,7 @@ section {
                 }
             }
             &.first-article{
-                animation-delay: 0;
+                animation-delay: 0s;
             }
             &.second-article{
                 animation-delay: 250ms;
@@ -93,10 +92,7 @@ section {
                         box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
                         overflow: hidden;
                     }
-                    //margin-top: 1rem;
-            //         overflow: hidden;
-            //         cursor: pointer;
-    
+
                     .detail {
                         flex: 1 1 0;
                         overflow: hidden;
@@ -156,26 +152,13 @@ section {
         }
     }
 
-
-
     button{
         margin: 3rem auto 0;
         display: block;
-        border-radius: 1.5rem;
-        padding: 1rem 3rem;
-        background: reg($color-primary);
-        background: linear-gradient(0deg,$color-primary 0%,
-        $color-secondary 100%);
-        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
-        font-size: 1rem;
-        border: none;
-        color: white;
-        cursor: pointer;
-        transition: all 1s;
-
+        padding: 1rem 3rem;  
+        @include button-animation;
         &:hover {
-            background: linear-gradient(0deg,$color-secondary 0%,
-            $color-primary 100%);
+            opacity: 0.7;
             box-shadow: 0 5px 5px rgba(0, 0, 0, 0.8);
         }
     }

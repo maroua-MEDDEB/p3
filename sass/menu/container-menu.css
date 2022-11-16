@@ -138,18 +138,19 @@ body {
 }
 .call-to-action button {
   margin-top: 0.5rem;
-  border-radius: 1.5rem;
   padding: 1rem 1.5rem;
+  border-radius: 1.5rem;
   background: reg(rgb(147, 86, 220));
   background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
   font-size: 1rem;
   border: none;
+  cursor: pointer;
   color: white;
+  transition: all 1s;
 }
 .call-to-action button:hover {
-  background: linear-gradient(0deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
-  cursor: pointer;
+  opacity: 0.7;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.8);
 }
 
@@ -227,6 +228,7 @@ body {
   flex-wrap: wrap;
   margin-left: -0.5rem;
   margin-right: -0.5rem;
+  padding: 5px;
 }
 .articles article .card {
   width: 100%;
@@ -264,7 +266,7 @@ body {
      object-position: bottom center;
 }
 .articles article .card .card-content .card-body {
-  padding: 0.5rem 1rem;
+  padding: 1rem;
   display: flex;
 }
 .articles article .card .card-content .card-body .card-text p {
@@ -407,6 +409,7 @@ section .body-container {
 section .body-container article {
   margin-top: 2.5rem;
   overflow: hidden;
+  padding: 10px;
   -webkit-animation: slidefood 2s;
           animation: slidefood 2s;
   opacity: 0;
@@ -437,8 +440,8 @@ section .body-container article:first-child {
   }
 }
 section .body-container article.first-article {
-  -webkit-animation-delay: 0;
-          animation-delay: 0;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
 }
 section .body-container article.second-article {
   -webkit-animation-delay: 250ms;
@@ -526,19 +529,19 @@ section .body-container article .items .item:hover i {
 section button {
   margin: 3rem auto 0;
   display: block;
-  border-radius: 1.5rem;
   padding: 1rem 3rem;
+  border-radius: 1.5rem;
   background: reg(rgb(147, 86, 220));
   background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
   font-size: 1rem;
   border: none;
-  color: white;
   cursor: pointer;
+  color: white;
   transition: all 1s;
 }
 section button:hover {
-  background: linear-gradient(0deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+  opacity: 0.7;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.8);
 }
 
