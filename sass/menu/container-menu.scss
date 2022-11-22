@@ -1,6 +1,6 @@
-@import'../variables.scss';
+@import'../layouts/variables.scss';
 @import url($ul-writing-style);
-@import '../container_page/container.scss';
+@import '../accueille/container.scss';
 
 section {
     background: #f6f6f6;
@@ -56,7 +56,7 @@ section {
             &.second-article{
                 animation-delay: 250ms;
             }
-            &.sethirdcond-article{
+            &.third-article{
                 animation-delay: 500ms;
             }
 

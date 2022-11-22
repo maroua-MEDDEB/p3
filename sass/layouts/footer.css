@@ -25,6 +25,9 @@
   height: 0.75rem;
   margin-right: 0.5rem;
 }
+.footer-page .footer-infos .footer_page_info p {
+  margin-left: 3px;
+}
 .footer-page .footer-infos a {
   text-decoration: none;
   color: white;

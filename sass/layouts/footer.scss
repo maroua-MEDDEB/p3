@@ -1,4 +1,4 @@
-@import'../variables.scss';
+@import'../layouts/variables.scss';
 @import url($ul-writing-style);
 
 // version smartphone
@@ -25,6 +25,9 @@
             .icone-footer{
                 height: 0.75rem;
                 margin-right: 0.5rem;
+            }
+            p{
+                margin-left: 3px;
             }
         }
         a{

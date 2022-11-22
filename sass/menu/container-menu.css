@@ -294,7 +294,7 @@ body {
   transition: all 0.5s;
 }
 .articles article .card .card-content .card-body .wish-list-icon:hover .fa-regular {
-  opacity: 1;
+  opacity: 0;
 }
 .articles article .card .card-content .card-body .wish-list-icon:hover .fa-sharp {
   opacity: 1;
@@ -397,7 +397,7 @@ section .title-container .wish-list-icon .fa-sharp {
   transition: all 0.5s;
 }
 section .title-container .wish-list-icon:hover .fa-regular {
-  opacity: 1;
+  opacity: 0;
 }
 section .title-container .wish-list-icon:hover .fa-sharp {
   opacity: 1;
@@ -447,7 +447,7 @@ section .body-container article.second-article {
   -webkit-animation-delay: 250ms;
           animation-delay: 250ms;
 }
-section .body-container article.sethirdcond-article {
+section .body-container article.third-article {
   -webkit-animation-delay: 500ms;
           animation-delay: 500ms;
 }
