@@ -293,7 +293,7 @@ body {
   transition: all 0.5s;
 }
 .articles article .card .card-content .card-body .wish-list-icon:hover .fa-regular {
-  opacity: 1;
+  opacity: 0;
 }
 .articles article .card .card-content .card-body .wish-list-icon:hover .fa-sharp {
   opacity: 1;
